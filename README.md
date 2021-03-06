@@ -11,3 +11,6 @@ Environment
 
 Interactable Objects
 - Objects with Collider & Rigidbody + PickUp script. Allows for player pick up via mouseClick/Release.
+
+Notes
+- Adjust gravity according to movement.
