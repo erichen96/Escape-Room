@@ -14,3 +14,5 @@ Interactable Objects
 
 Notes
 - Adjust gravity according to movement.
+- PickUpPressureCube.cs is the same as PickUp.cs but contains boxId used for puzzle.
+- Add animation on button press, ie OnTrigger also moves button into -y direction.
