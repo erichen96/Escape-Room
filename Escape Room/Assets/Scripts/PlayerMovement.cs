@@ -17,6 +17,14 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
 
+    private float currentJumpHeight;
+
+
+    void Start(){
+        currentJumpHeight = jumpHeight;
+    }
+
+
     // Update is called once per frame
     void Update()
     {
@@ -34,11 +42,23 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(move * speed * Time.deltaTime);
 
         if(Input.GetButtonDown("Jump") && isGrounded){
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            velocity.y = Mathf.Sqrt(currentJumpHeight * -2f * gravity);
         }
 
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit){
+        switch(hit.gameObject.tag){
+             case "JumpPad":
+                currentJumpHeight = 25f;
+                break;
+
+            case "Ground":
+                currentJumpHeight = jumpHeight;
+                break;
+        }
     }
 }
