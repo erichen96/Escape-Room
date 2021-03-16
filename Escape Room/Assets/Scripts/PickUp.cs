@@ -7,7 +7,6 @@ public class PickUp : MonoBehaviour
     public Transform player;
     public Transform theDestination;
     bool hasPlayer = false;
-    private bool holding = false;
 
     void OnMouseDown(){
         GetComponent<Rigidbody>().useGravity = false;
@@ -42,7 +41,6 @@ public class PickUp : MonoBehaviour
         GetComponent<Rigidbody>().isKinematic = true;
         this.transform.position = theDestination.position;
         this.transform.parent = GameObject.Find("Destination").transform;
-        holding = true;
         }
         
 
