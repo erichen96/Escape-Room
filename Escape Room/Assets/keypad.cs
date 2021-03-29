@@ -11,6 +11,10 @@ public class keypad : MonoBehaviour
     public bool keypadScreen;
     public Transform doorHinge;
 
+    public Transform keypadPos;
+    public Transform player;
+    public float distance;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +24,20 @@ public class keypad : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        distance = Vector3.Distance(player.position, keypadPos.position);
+        if (distance < 5)
+        {
+            onTrigger = true;
+        }
+        else
+        {
+            onTrigger = false;
+            keypadScreen = false;
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            input = "";
+        }
+
         if (Input.GetKeyDown(KeyCode.Alpha1)) {
             input = input + "1";
         }
@@ -86,6 +104,7 @@ public class keypad : MonoBehaviour
         onTrigger = false;
         keypadScreen = false;
         input = "";
+        Cursor.visible = false;
     }
 
     void OnGUI()
@@ -107,60 +126,60 @@ public class keypad : MonoBehaviour
             {
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
-                GUI.Box(new Rect(  0,   0, 320, 450), "");
-                GUI.Box(new Rect(  5,   5, 310,  25), input);
+                GUI.Box(new Rect(550, 200, 320, 450), "");
+                GUI.Box(new Rect(555, 205, 310,  25), input);
 
-                if (GUI.Button(new Rect(5, 35, 100, 100), "1"))
+                if (GUI.Button(new Rect(555, 235, 100, 100), "1"))
                 {
                     input = input + "1";
                 }
 
-                if (GUI.Button(new Rect(110,  35, 100, 100), "2"))
+                if (GUI.Button(new Rect(660, 235, 100, 100), "2"))
                 {
                     input = input + "2";
                 }
 
-                if (GUI.Button(new Rect(215, 35, 100, 100), "3"))
+                if (GUI.Button(new Rect(765, 235, 100, 100), "3"))
                 {
                     input = input + "3";
                 }
 
-                if (GUI.Button(new Rect(5, 140, 100, 100), "4"))
+                if (GUI.Button(new Rect(555, 340, 100, 100), "4"))
                 {
                     input = input + "4";
                 }
 
-                if (GUI.Button(new Rect(110, 140, 100, 100), "5"))
+                if (GUI.Button(new Rect(660, 340, 100, 100), "5"))
                 {
                     input = input + "5";
                 }
 
-                if (GUI.Button(new Rect(215, 140, 100, 100), "6"))
+                if (GUI.Button(new Rect(765, 340, 100, 100), "6"))
                 {
                     input = input + "6";
                 }
 
-                if (GUI.Button(new Rect(5, 245, 100, 100), "7"))
+                if (GUI.Button(new Rect(555, 445, 100, 100), "7"))
                 {
                     input = input + "7";
                 }
 
-                if (GUI.Button(new Rect(110, 245, 100, 100), "8"))
+                if (GUI.Button(new Rect(660, 445, 100, 100), "8"))
                 {
                     input = input + "8";
                 }
 
-                if (GUI.Button(new Rect(215, 245, 100, 100), "9"))
+                if (GUI.Button(new Rect(765, 445, 100, 100), "9"))
                 {
                     input = input + "9";
                 }
 
-                if (GUI.Button(new Rect(110, 350, 100, 100), "0"))
+                if (GUI.Button(new Rect(660, 550, 100, 100), "0"))
                 {
                     input = input + "0";
                 }
 
-                if (GUI.Button(new Rect(215, 350, 100, 100), "Backspace"))
+                if (GUI.Button(new Rect(765, 550, 100, 100), "Backspace"))
                 {
                     input = input.Remove(input.Length - 1);
                 }

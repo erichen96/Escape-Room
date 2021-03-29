@@ -1985,10 +1985,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curPassword: 12345
   input: 
-  onTrigger: 1
+  onTrigger: 0
   doorOpen: 0
   keypadScreen: 0
   doorHinge: {fileID: 2020137258}
+  keypadPos: {fileID: 1878196857}
+  player: {fileID: 1500487626}
+  distance: 30
 --- !u!1 &1880694492
 GameObject:
   m_ObjectHideFlags: 0
