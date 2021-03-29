@@ -9,13 +9,13 @@ public class DoorTrigger : MonoBehaviour
     void OnCollisionEnter(Collision col){
         if (col.gameObject.layer != 8)
       {
-        door.transform.position += new Vector3(0,8,0);
+        door.transform.position += new Vector3(0,4,0);
         Debug.Log("Collision Entered");
     }
     }
 
     void OnCollisionExit(Collision col){
-        door.transform.position += new Vector3(0,-8,0);
+        door.transform.position += new Vector3(0,-4,0);
         Debug.Log("Collision Exit");
     }
 }
