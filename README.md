@@ -10,10 +10,13 @@ Environment
 - Contains all objects that contains Layer: Ground. Used to determine if player is Grounded and can jump.
 
 Interactable Objects
-- Objects with Collider & Rigidbody + PickUp script. Allows for player pick up via mouseClick/Release && KeyPress(E).
+- Objects tagged with PickUps can be picked up when player has tool1 [1] activated. 
+Objects can be grabbed/drop with [E] and thrown with left mouse.
+- Scripts used: GravityGun
 
 Gun
-- Currently uses Right Mouse Click to Fire.
+- Select Weapon using [2] or mousewheel.
+- Shoots using Fire1/ Left Mouse Click
 - Scripts used: Gun - Contains fireRate, Audio, Particle System, damage/range, impactForce(works on all objects), 
 		Target - Can be attached to objects that can be destructible. (Default is 50f, 5 hits) 
 
