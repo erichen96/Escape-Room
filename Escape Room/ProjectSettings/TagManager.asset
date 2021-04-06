@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Ground
   - JumpPad
+  - PickUps
+  - TeleportPlatform
+  - TeleportPlatform_Correct
   layers:
   - Default
   - TransparentFX
