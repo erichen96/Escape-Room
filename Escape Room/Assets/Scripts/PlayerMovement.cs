@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
+
+    [Header("Audio")]
+    public GameObject JumpSound;
 
     Vector3 velocity;
     bool isGrounded;
@@ -43,6 +47,8 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetButtonDown("Jump") && isGrounded){
             velocity.y = Mathf.Sqrt(currentJumpHeight * -2f * gravity);
+            JumpSound.SetActive (true);
+            JumpSound.SetActive (false);
         }
 
         velocity.y += gravity * Time.deltaTime;
