@@ -1421,7 +1421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: 
-  Event: event:/SFX_Jump
+  Event: event:/SFX_Jumptest
   PlayEvent: 11
   StopEvent: 0
   AllowFadeout: 1
@@ -16348,8 +16348,8 @@ GameObject:
   - component: {fileID: 1947351975}
   - component: {fileID: 1947351976}
   - component: {fileID: 1947351979}
-  - component: {fileID: 1947351977}
   - component: {fileID: 1947351978}
+  - component: {fileID: 1947351977}
   m_Layer: 0
   m_Name: First Person Player
   m_TagString: Untagged
