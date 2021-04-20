@@ -89,8 +89,9 @@ public class keypad : MonoBehaviour
 
         if(doorOpen)
         {
-            var newRot = Quaternion.RotateTowards(doorHinge.rotation, Quaternion.Euler(0.0f, 0.0f, 0.0f), Time.deltaTime * 250);
-            doorHinge.rotation = newRot;
+            doorHinge.transform.position += new Vector3(0, 4, 0);
+            //var newRot = Quaternion.RotateTowards(doorHinge.rotation, Quaternion.Euler(0.0f, 0.0f, 0.0f), Time.deltaTime * 250);
+            //doorHinge.rotation = newRot;
         }
     }
 
@@ -113,7 +114,7 @@ public class keypad : MonoBehaviour
         {
             if (onTrigger)
             {
-                GUI.Box(new Rect(0, 0, 200, 25), "Press 'E' to open keypad");
+                GUI.Box(new Rect((Screen.width/2) - 100, (Screen.height/2) + 100, 200, 25), "Press 'E' to open keypad");
 
                 if (Input.GetKeyDown(KeyCode.E))
                 {
