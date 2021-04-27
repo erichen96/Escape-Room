@@ -38,7 +38,7 @@ public class GravityGun : MonoBehaviour
             }
         }
 
-        if(Input.GetKeyDown(KeyCode.F)){
+        if(Input.GetKeyDown(KeyCode.E)){
             RaycastHit hit;
             Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f));
             if(Physics.Raycast(ray, out hit, maxGrabDistance) && hit.transform.tag == "Button"){
