@@ -26,4 +26,8 @@ public class PanelAnswerHandler : MonoBehaviour
 
         panel.GetComponent<Image>().sprite = spriteList[currentImageIndex];
     }
+
+    public void OnMouseDown(){
+        UpdateImage();
+    }
 }

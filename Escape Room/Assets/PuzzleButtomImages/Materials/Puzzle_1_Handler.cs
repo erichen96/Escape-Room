@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Puzzle_1_Handler : MonoBehaviour
 {
@@ -29,6 +30,8 @@ public class Puzzle_1_Handler : MonoBehaviour
     public GameObject Winter;
 
 
+    public UnityEvent openDoor;
+
     void Start()
     {
         
@@ -36,19 +39,17 @@ public class Puzzle_1_Handler : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
+
+    }
+
+    public void CheckAnswer(){
         if((Bane.GetComponent<Renderer>().sharedMaterials[1] == AnswerBane) && (Circle.GetComponent<Renderer>().sharedMaterials[1] == AnswerCircle)
     && (Flower.GetComponent<Renderer>().sharedMaterials[1] == AnswerFlower) && (Spring.GetComponent<Renderer>().sharedMaterials[1] == AnswerSpring)
     && (Sun.GetComponent<Renderer>().sharedMaterials[1] == AnswerSun) && (Sunrise.GetComponent<Renderer>().sharedMaterials[1] == AnswerSunrise)
     && (Sunset.GetComponent<Renderer>().sharedMaterials[1] == AnswerSunset) && (Water.GetComponent<Renderer>().sharedMaterials[1] == AnswerWater)
     && (Wine.GetComponent<Renderer>().sharedMaterials[1] == AnswerWine) && (Winter.GetComponent<Renderer>().sharedMaterials[1] == AnswerWinter)){
             Debug.Log("Open Door");
-        }
-        
-    }
-
-    void CheckImagePuzzle(){
-        if(Bane.GetComponent<Renderer>().sharedMaterials[1] == AnswerBane){
-            Debug.Log("Open Door");
+            openDoor.Invoke();
         }
     }
 }

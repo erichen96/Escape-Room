@@ -9,6 +9,9 @@ TagManager:
   - PickUps
   - TeleportPlatform
   - TeleportPlatform_Correct
+  - Button
+  - PuzzleHandler1
+  - PuzzleHandler2
   layers:
   - Default
   - TransparentFX

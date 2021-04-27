@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class Puzzle_2_Handler : MonoBehaviour
 {
@@ -25,14 +26,31 @@ public class Puzzle_2_Handler : MonoBehaviour
     Image _Image3;
     Image _Image4;
 
+    public UnityEvent openDoor2;
+
     void Start()
     {
         
     }
 
     // Update is called once per frame
-    void Update(){
+    // void Update(){
+    //         _Image1 = Image1.GetComponent<Image>();
+    //         _Image2 = Image2.GetComponent<Image>();
+    //         _Image3 = Image3.GetComponent<Image>();
+    //         _Image4 = Image4.GetComponent<Image>();
 
+
+
+
+    //     if((_Image1.sprite == Answer1) && (_Image2.sprite == Answer2)
+    // && (_Image3.sprite == Answer3) && (_Image4.sprite == Answer4)){
+    //         Debug.Log("Open Door 2");
+    //     }
+        
+    // }
+
+    public void CheckAnswer(){
             _Image1 = Image1.GetComponent<Image>();
             _Image2 = Image2.GetComponent<Image>();
             _Image3 = Image3.GetComponent<Image>();
@@ -43,11 +61,10 @@ public class Puzzle_2_Handler : MonoBehaviour
 
         if((_Image1.sprite == Answer1) && (_Image2.sprite == Answer2)
     && (_Image3.sprite == Answer3) && (_Image4.sprite == Answer4)){
-            Debug.Log("Open Door");
+            Debug.Log("Open Door 2");
+            openDoor2.Invoke();
         }
-        
     }
-
     // void CheckImagePuzzle(){
     //     if(Bane.GetComponent<Renderer>().sharedMaterials[1] == AnswerBane){
     //         Debug.Log("Open Door");

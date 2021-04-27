@@ -7,7 +7,7 @@ public class ChangeImage_P1 : MonoBehaviour
     public Material material1;
     public Material material2;
 
-    public bool FirstMaterial = true;
+    public bool FirstMaterial = false;
     public bool SecondMaterial = false;
     
     void Start()
