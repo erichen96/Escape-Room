@@ -10,6 +10,7 @@ public class Gun : MonoBehaviour
 
     public Camera fpsCam;
     public ParticleSystem muzzleFlash;
+    public GameObject GunShot;
     public AudioSource sound;
     public GameObject impactEffect;
     // Update is called once per frame
@@ -29,6 +30,8 @@ public class Gun : MonoBehaviour
 
     void Shoot(){
         muzzleFlash.Play();
+        GunShot.SetActive (true);
+        GunShot.SetActive (false);
         sound.Play();
 
         RaycastHit hit;
