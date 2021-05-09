@@ -86,6 +86,10 @@ public class keypad : MonoBehaviour
         {
             doorOpen = true;
         }
+        else if (input.Length == 4 && input != curPassword)
+        {
+            keypadScreen = false;
+        }
 
         if(doorOpen)
         {
