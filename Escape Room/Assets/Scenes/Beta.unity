@@ -3312,6 +3312,21 @@ PrefabInstance:
       propertyPath: TeleportDestination
       value: 
       objectReference: {fileID: 897660320}
+    - target: {fileID: 2541693901190503246, guid: 9d5e164263f32cf4bbaf99ae38cf49fb,
+        type: 3}
+      propertyPath: StopEvent
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2541693901190503246, guid: 9d5e164263f32cf4bbaf99ae38cf49fb,
+        type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2541693901190503246, guid: 9d5e164263f32cf4bbaf99ae38cf49fb,
+        type: 3}
+      propertyPath: OverrideMinDistance
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4083260591615504626, guid: 9d5e164263f32cf4bbaf99ae38cf49fb,
         type: 3}
       propertyPath: m_IsActive
@@ -3352,7 +3367,8 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2541693901190503246, guid: 9d5e164263f32cf4bbaf99ae38cf49fb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9d5e164263f32cf4bbaf99ae38cf49fb, type: 3}
 --- !u!1001 &327240305
 PrefabInstance:
