@@ -15,11 +15,11 @@ MonoBehaviour:
   Path: Assets/FMOD/EscapeRoom/Build/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637562903995660322
+  lastModified: 637562384678254347
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 808
+    Value: 860
   Exists: 1
 --- !u!114 &-7992499447635342018
 MonoBehaviour:
@@ -35,8 +35,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Music_espionage
   guid: 856cdc858010a84d936853bdd474ba10
-  Banks:
-  - {fileID: 5414206898936247274}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -86,6 +85,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-3775997376103853941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music_EscapeTheLab
+  m_EditorClassIdentifier: 
+  Path: event:/Music_EscapeTheLab
+  guid: 0d4f930845914e42893c4748c3dac448
+  Banks:
+  - {fileID: 5414206898936247274}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 48000
 --- !u!114 &-3692746964562780011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,6 +129,29 @@ MonoBehaviour:
   - Name: 
     Value: 804
   Exists: 1
+--- !u!114 &-3291202214217065537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music_Espionage
+  m_EditorClassIdentifier: 
+  Path: event:/Music_Espionage
+  guid: 856cdc858010a84d936853bdd474ba10
+  Banks:
+  - {fileID: 5414206898936247274}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 54842
 --- !u!114 &-2905763999546335608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,13 +192,14 @@ MonoBehaviour:
   - {fileID: 5414206898936247274}
   EditorEvents:
   - {fileID: -2905763999546335608}
-  - {fileID: -7992499447635342018}
+  - {fileID: -3775997376103853941}
+  - {fileID: -3291202214217065537}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5414206898936247274}
   StringsBanks:
   - {fileID: -8776887553868908961}
-  stringsBankWriteTime: 637562903995660322
+  stringsBankWriteTime: 637562384678254347
   cacheVersion: 6
 --- !u!114 &318879523063579447
 MonoBehaviour:
@@ -280,7 +326,7 @@ MonoBehaviour:
   Path: Assets/FMOD/EscapeRoom/Build/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637562903995650403
+  lastModified: 637562384678244339
   LoadResult: 0
   FileSizes: []
   Exists: 1
