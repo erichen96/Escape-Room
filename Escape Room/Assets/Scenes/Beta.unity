@@ -4423,6 +4423,16 @@ PrefabInstance:
       propertyPath: TeleportDestination
       value: 
       objectReference: {fileID: 897660320}
+    - target: {fileID: 2541693901190503246, guid: 9d5e164263f32cf4bbaf99ae38cf49fb,
+        type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2541693901190503246, guid: 9d5e164263f32cf4bbaf99ae38cf49fb,
+        type: 3}
+      propertyPath: OverrideMinDistance
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4083260591615504626, guid: 9d5e164263f32cf4bbaf99ae38cf49fb,
         type: 3}
       propertyPath: m_IsActive
@@ -4463,7 +4473,8 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2541693901190503246, guid: 9d5e164263f32cf4bbaf99ae38cf49fb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9d5e164263f32cf4bbaf99ae38cf49fb, type: 3}
 --- !u!1001 &327240305
 PrefabInstance:
@@ -5168,6 +5179,7 @@ MonoBehaviour:
   material2: {fileID: 2100000, guid: b950b6c5b73184c4b804b63c568e5b89, type: 2}
   FirstMaterial: 0
   SecondMaterial: 1
+  click: event:/UI_Art
 --- !u!1 &435565708
 GameObject:
   m_ObjectHideFlags: 0
@@ -6822,6 +6834,60 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 29982885}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &568857182
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 568857184}
+  - component: {fileID: 568857183}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &568857183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568857182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Music_Level2
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!4 &568857184
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568857182}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 45.63039, y: 7.883915, z: -36.575462}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &582741576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7128,6 +7194,7 @@ MonoBehaviour:
   material2: {fileID: 2100000, guid: a41b677fa3e25e14190a9aa56d99cd57, type: 2}
   FirstMaterial: 0
   SecondMaterial: 1
+  click: event:/UI_Art
 --- !u!1001 &607980700
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7527,6 +7594,7 @@ MonoBehaviour:
   material2: {fileID: 2100000, guid: 30738b2e26151064a9f7ac0acc2e4622, type: 2}
   FirstMaterial: 0
   SecondMaterial: 1
+  click: event:/UI_Art
 --- !u!1 &634568657
 GameObject:
   m_ObjectHideFlags: 0
@@ -9394,6 +9462,7 @@ MonoBehaviour:
   material2: {fileID: 2100000, guid: a9cc067527640b840ab8b1493838d11e, type: 2}
   FirstMaterial: 0
   SecondMaterial: 1
+  click: event:/UI_Art
 --- !u!1001 &800269189
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12417,6 +12486,7 @@ MonoBehaviour:
   material2: {fileID: 2100000, guid: 5477930215ab75348b0a95a07f281f34, type: 2}
   FirstMaterial: 0
   SecondMaterial: 1
+  click: event:/UI_Art
 --- !u!1 &1031674698
 GameObject:
   m_ObjectHideFlags: 0
@@ -16332,6 +16402,7 @@ MonoBehaviour:
   material2: {fileID: 2100000, guid: af5e65443683f144399088d83ba55cf5, type: 2}
   FirstMaterial: 0
   SecondMaterial: 1
+  click: event:/UI_Art
 --- !u!1001 &1377112279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16669,6 +16740,7 @@ MonoBehaviour:
   material2: {fileID: 2100000, guid: 2a87ba9abf8b19942a9e5d53e8e6c263, type: 2}
   FirstMaterial: 0
   SecondMaterial: 1
+  click: event:/UI_Art
 --- !u!1 &1384933886
 GameObject:
   m_ObjectHideFlags: 0
@@ -19767,6 +19839,7 @@ MonoBehaviour:
   material2: {fileID: 2100000, guid: bd01ab676c0ff0a4e803068904b8c9b4, type: 2}
   FirstMaterial: 0
   SecondMaterial: 1
+  click: event:/UI_Art
 --- !u!1 &1627123022
 GameObject:
   m_ObjectHideFlags: 0
@@ -20301,6 +20374,7 @@ MonoBehaviour:
   material2: {fileID: 2100000, guid: fb61544ba8b18fe4ab156c17069566b0, type: 2}
   FirstMaterial: 0
   SecondMaterial: 1
+  click: event:/UI_Art
 --- !u!1 &1688301863
 GameObject:
   m_ObjectHideFlags: 0
@@ -25612,6 +25686,7 @@ MonoBehaviour:
   material2: {fileID: 2100000, guid: 6edbbebd6410e7748988dd6578a57e86, type: 2}
   FirstMaterial: 0
   SecondMaterial: 1
+  click: event:/UI_Art
 --- !u!1 &2070572094
 GameObject:
   m_ObjectHideFlags: 0
