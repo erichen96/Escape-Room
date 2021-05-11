@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 using UnityEngine.Events;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : NetworkBehaviour
 {
     public CharacterController controller;
 
@@ -23,15 +24,19 @@ public class PlayerMovement : MonoBehaviour
 
     private float currentJumpHeight;
 
-
+    [Client]
     void Start(){
+        if(!hasAuthority) {return; }
         currentJumpHeight = jumpHeight;
     }
 
 
     // Update is called once per frame
+    [Client]
     void Update()
     {
+        if(!hasAuthority) {return; }
+
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if(isGrounded && velocity.y < 0){
@@ -56,7 +61,10 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
     }
 
+    [Client]
     private void OnControllerColliderHit(ControllerColliderHit hit){
+        if(!hasAuthority) {return; }
+
         switch(hit.gameObject.tag){
              case "JumpPad":
                 currentJumpHeight = 25f;

@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Mirror;
 using UnityEngine;
 
-public class GravityGun : MonoBehaviour
+public class GravityGun : NetworkBehaviour
 {
     [SerializeField] Camera cam;
     [SerializeField] float maxGrabDistance = 10f, throwForce = 20f, lerpSpeed = 10f;
@@ -10,8 +11,11 @@ public class GravityGun : MonoBehaviour
 
     Rigidbody grabbedRB;
 
+    [Client]
     void Update()
     {
+        if(!hasAuthority) {return; }
+
         if(grabbedRB){
             grabbedRB.MovePosition(Vector3.Lerp(grabbedRB.position, theDestination.transform.position, Time.deltaTime * lerpSpeed));
 
