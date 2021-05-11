@@ -61,6 +61,10 @@ public class GravityGun : MonoBehaviour
                 Debug.Log(hit.transform.name + "Open");
 
                 hit.transform.GetComponent<Puzzle_2_Handler>().CheckAnswer();
+            }if(Physics.Raycast(ray, out hit, maxGrabDistance) && hit.transform.tag == "PuzzleHandler3"){
+                Debug.Log(hit.transform.name + "Open");
+
+                hit.transform.GetComponent<Puzzle_3_Handler>().CheckAnswer();
             }
              else {
                 Debug.Log(hit.transform.name + " Failed");

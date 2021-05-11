@@ -28,6 +28,8 @@ public class Puzzle_2_Handler : MonoBehaviour
 
     public UnityEvent openDoor2;
 
+    public GameObject Door;
+    public Material CompletePuzzleColor;
     void Start()
     {
         
@@ -62,6 +64,9 @@ public class Puzzle_2_Handler : MonoBehaviour
         if((_Image1.sprite == Answer1) && (_Image2.sprite == Answer2)
     && (_Image3.sprite == Answer3) && (_Image4.sprite == Answer4)){
             Debug.Log("Open Door 2");
+            var mats = Door.GetComponent<Renderer>().sharedMaterials;
+            mats[0] = CompletePuzzleColor;
+            Door.GetComponent<Renderer>().sharedMaterials = mats;
             openDoor2.Invoke();
         }
     }

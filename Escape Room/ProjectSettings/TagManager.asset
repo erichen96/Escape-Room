@@ -12,6 +12,8 @@ TagManager:
   - Button
   - PuzzleHandler1
   - PuzzleHandler2
+  - PuzzleHandler3
+  - FinalKey
   layers:
   - Default
   - TransparentFX

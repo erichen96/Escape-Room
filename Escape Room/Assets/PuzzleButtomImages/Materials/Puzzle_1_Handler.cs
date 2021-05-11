@@ -29,18 +29,11 @@ public class Puzzle_1_Handler : MonoBehaviour
     public GameObject Wine;
     public GameObject Winter;
 
-
+    [SerializeField]
+    public GameObject Door;
     public UnityEvent openDoor;
+    public Material CompletePuzzleColor;
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update(){
-
-    }
 
     public void CheckAnswer(){
         if((Bane.GetComponent<Renderer>().sharedMaterials[1] == AnswerBane) && (Circle.GetComponent<Renderer>().sharedMaterials[1] == AnswerCircle)
@@ -49,6 +42,10 @@ public class Puzzle_1_Handler : MonoBehaviour
     && (Sunset.GetComponent<Renderer>().sharedMaterials[1] == AnswerSunset) && (Water.GetComponent<Renderer>().sharedMaterials[1] == AnswerWater)
     && (Wine.GetComponent<Renderer>().sharedMaterials[1] == AnswerWine) && (Winter.GetComponent<Renderer>().sharedMaterials[1] == AnswerWinter)){
             Debug.Log("Open Door");
+            var mats = Door.GetComponent<Renderer>().sharedMaterials;
+            mats[0] = CompletePuzzleColor;
+            Door.GetComponent<Renderer>().sharedMaterials = mats;
+            
             openDoor.Invoke();
         }
     }
