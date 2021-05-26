@@ -71,7 +71,12 @@ public override void OnPlayerLeftRoom(Player otherPlayer)
 
 public void OnClick_StartGame()
 {
-    PhotonNetwork.LoadLevel(1);
+    if(PhotonNetwork.IsMasterClient)
+    {
+        PhotonNetwork.CurrentRoom.IsOpen = false;
+        PhotonNetwork.CurrentRoom.IsVisible = false;
+        PhotonNetwork.LoadLevel(1);
+    }
 }
 
 }
