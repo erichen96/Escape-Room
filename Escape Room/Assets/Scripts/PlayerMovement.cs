@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Mirror;
+using Photon.Pun;
 using UnityEngine.Events;
 
-public class PlayerMovement : NetworkBehaviour
+public class PlayerMovement : MonoBehaviourPun
+//IPunObservable
 {
     public CharacterController controller;
 
@@ -24,18 +25,17 @@ public class PlayerMovement : NetworkBehaviour
 
     private float currentJumpHeight;
 
-    [Client]
     void Start(){
-        if(!hasAuthority) {return; }
+        if(!photonView.IsMine) {return; }
         currentJumpHeight = jumpHeight;
     }
 
 
     // Update is called once per frame
-    [Client]
+    
     void Update()
     {
-        if(!hasAuthority) {return; }
+        if(!photonView.IsMine) {return; }
 
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
@@ -61,9 +61,9 @@ public class PlayerMovement : NetworkBehaviour
         controller.Move(velocity * Time.deltaTime);
     }
 
-    [Client]
+    
     private void OnControllerColliderHit(ControllerColliderHit hit){
-        if(!hasAuthority) {return; }
+        if(!photonView.IsMine) {return; }
 
         switch(hit.gameObject.tag){
              case "JumpPad":
@@ -75,4 +75,6 @@ public class PlayerMovement : NetworkBehaviour
                 break;
         }
     }
+
+
 }
